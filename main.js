@@ -1,5 +1,5 @@
 // create empty list to hold my journal entry
-let journalEntry = [];
+journalList = [];
  
 // This function logs the journal entries
 function logJournalEntries() {
