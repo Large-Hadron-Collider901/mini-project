@@ -1,5 +1,5 @@
-// create empty list to hold my journal entries
-let journalEntries = [];
+// create empty list to hold my journal entry
+let journalEntry = [];
  
 // This function logs the journal entries
 function logJournalEntries() {
@@ -16,7 +16,7 @@ function addJournalEntry(date, entry, confidence) {
   };
 
   // Add the entry to the Array and to the DOM (u do this...)
-  journalEntries.push(newEntry);
+  journalEntry.push(newEntry);
   // Call your logJournalEntries function to log all entries in the array to the console
   logJournalEntries();
 }
