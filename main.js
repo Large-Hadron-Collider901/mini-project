@@ -1,8 +1,6 @@
 // create empty list to hold my journal entries
 let journalEntries = [];
-// set up conditions to loop new journal entry until user selects cancel
-let doneEntering = false;
-while (doneEntering == false) {
+ 
 // This function logs the journal entries
 function logJournalEntries() {
   for (let index = 0; index < journalEntries.length; index++) {
@@ -14,7 +12,7 @@ function addJournalEntry(date, entry, confidence) {
   let newEntry = {
     creation_date: date,
     journal_entry: entry,
-    confidence_level: confidence,
+    confidence_level: confidence
   };
 
   // Add the entry to the Array and to the DOM (u do this...)
@@ -38,14 +36,10 @@ function newJournalEntry() {
 
   if (confidenceLvl === null || confidenceLvl.toUpperCase() === "QUIT") return;
   while (validConfidence.indexOf(confidenceLvl.toUpperCase()) < 0) {
-    confidenceLvl = prompt(
-      "Invalid confidence level. Please enter a valid confidence level.\nAvailable choices are easy, medium, and hard."
-    );
+    confidenceLvl = prompt("Invalid input. Please enter one of the following responses: easy, medium, and hard.");
   }
 
-  let entry = prompt(
-    "Type your journal entry below, then select OK when you are finished."
-  );
+  let entry = prompt("Type your journal entry below, then select OK when you are finished.");
 
 
   // use a confirm dialog box to ask if they really want to submit
@@ -53,15 +47,13 @@ function newJournalEntry() {
   // when user selects OK to confirm submit- continue loop
   if (confirmation) {
     newEntry.push(date, entry, confidence);
-    doneEntering = false 
     } 
     // when the user selects cancel
     else {
-    doneEntering = true; 
     alert("Entry not saved");
     }
   }
-}
+
 
 // 	prompt("Please enter today's Date");
 
